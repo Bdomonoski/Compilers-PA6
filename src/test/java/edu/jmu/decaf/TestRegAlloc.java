@@ -135,23 +135,23 @@ public class TestRegAlloc extends TestCase
                 "  int a; a = 2 + 3 * 4; " +
                 "  return a; }"),
             14); }
-
+    /*
     public void testIf() { assertEquals(runProgram(
                 "def int main() { " +
                 "  if (true) { return 2+1; } " +
                 "  else { return 3+1; } }"),
             3); }
-
+   
     public void testWhile() { assertEquals(runProgram(
                 "def int main() { " +
                 "  int a; a = 0; " +
                 "  while (a < 10) { a = a + 1; } " +
                 "  return a; }"),
             10); }
-
+    
     public void testFuncCall() { assertEquals(runProgram(
                 "def int add(int a, int b) { return a + b; } " +
                 "def int main() { return add(2,3); }"),
             5); }
-
+     */
 }
