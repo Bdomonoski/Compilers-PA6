@@ -96,7 +96,8 @@ public class TestRegAlloc extends TestCase
             retVal = interp.getReturnValue();
         }
     }
-
+    
+    
     /**
      * Parse, analyze, and generate ILOC for the given Decaf source code. Also
      * runs the resulting ILOC in the interpreter and returns the result.
@@ -135,12 +136,20 @@ public class TestRegAlloc extends TestCase
                 "  int a; a = 2 + 3 * 4; " +
                 "  return a; }"),
             14); }
+    
+    String[] args = {"TestFile.decaf"};
+    
+    
+    //public void testPrintAssign() { DecafCompiler.main(args); }
+    
+    
     /*
     public void testIf() { assertEquals(runProgram(
                 "def int main() { " +
                 "  if (true) { return 2+1; } " +
                 "  else { return 3+1; } }"),
             3); }
+   
    
     public void testWhile() { assertEquals(runProgram(
                 "def int main() { " +

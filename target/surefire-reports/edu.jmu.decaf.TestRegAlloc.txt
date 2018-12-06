@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: edu.jmu.decaf.TestRegAlloc
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec <<< FAILURE!
-testAssign(edu.jmu.decaf.TestRegAlloc)  Time elapsed: 0.069 sec  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec <<< FAILURE!
+testAssign(edu.jmu.decaf.TestRegAlloc)  Time elapsed: 0.011 sec  <<< FAILURE!
 junit.framework.AssertionFailedError: expected:<0> but was:<14>
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
@@ -10,7 +10,7 @@ junit.framework.AssertionFailedError: expected:<0> but was:<14>
 	at junit.framework.Assert.assertEquals(Assert.java:234)
 	at junit.framework.Assert.assertEquals(Assert.java:241)
 	at junit.framework.TestCase.assertEquals(TestCase.java:409)
-	at edu.jmu.decaf.TestRegAlloc.testAssign(TestRegAlloc.java:133)
+	at edu.jmu.decaf.TestRegAlloc.testAssign(TestRegAlloc.java:134)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

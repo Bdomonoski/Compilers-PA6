@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="edu.jmu.decaf.TestRegAlloc" time="0.069" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="edu.jmu.decaf.TestRegAlloc" time="0.063" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_171\jre\bin"/>
@@ -65,7 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="edu.jmu.decaf.TestRegAlloc" name="testAssign" time="0.069">
+  <testcase classname="edu.jmu.decaf.TestRegAlloc" name="testPrintAssign" time="0.052"/>
+  <testcase classname="edu.jmu.decaf.TestRegAlloc" name="testAssign" time="0.011">
     <failure message="expected:&lt;0&gt; but was:&lt;14&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;14&gt;
 	at junit.framework.Assert.fail(Assert.java:57)
 	at junit.framework.Assert.failNotEquals(Assert.java:329)
@@ -73,7 +74,7 @@
 	at junit.framework.Assert.assertEquals(Assert.java:234)
 	at junit.framework.Assert.assertEquals(Assert.java:241)
 	at junit.framework.TestCase.assertEquals(TestCase.java:409)
-	at edu.jmu.decaf.TestRegAlloc.testAssign(TestRegAlloc.java:133)
+	at edu.jmu.decaf.TestRegAlloc.testAssign(TestRegAlloc.java:134)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,17 +101,17 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>Block: 1
-  loadI 2 =&gt; r1
-  loadI 3 =&gt; r2
-  loadI 4 =&gt; r3
-  mult r2, r3 =&gt; r4
-  add r1, r4 =&gt; r5
-  storeAI r5 =&gt; [bp-4] {a}              // a = (2+(3*4))
-  loadAI [bp-4] =&gt; r6 {a}
-  i2i r6 =&gt; ret
-  return                                // return a
-
+    <system-out>{1=4, 2=2, 3=1, 4=1, 5=1, 6=1}
+Block 2
+	  loadI 2 =&gt; r1
+	  loadI 3 =&gt; r2
+	  loadI 4 =&gt; r3
+	  mult r2, r3 =&gt; r4
+	  add r1, r4 =&gt; r5
+	  storeAI r5 =&gt; [bp-4] {a}              // a = (2+(3*4))
+	  loadAI [bp-4] =&gt; r6 {a}
+	  i2i r6 =&gt; ret
+	  return                                // return a
 </system-out>
     <system-err>Exception in thread &quot;Thread-0&quot; junit.framework.AssertionFailedError
 	at junit.framework.Assert.fail(Assert.java:55)

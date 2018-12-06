@@ -8,5 +8,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="/decaf parser"/>
+	<classpathentry kind="src" path="/decaf"/>
+	<classpathentry kind="src" path="/decaf analysis"/>
+	<classpathentry kind="src" path="/Decaf ILOCGenerator"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
